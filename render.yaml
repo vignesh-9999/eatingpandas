@@ -7,7 +7,5 @@ services:
     startCommand: npm start
     autoDeploy: true
     envVars:
-      - key: NODE_ENV
-        value: production
       - key: HOST
         value: 0.0.0.0
