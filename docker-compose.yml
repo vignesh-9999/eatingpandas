@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    image: ha-cloud-webapp:latest
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+      HOST: 0.0.0.0
+      LOG_LEVEL: info
+      GLOBAL_RATE_LIMIT_MAX: 4000
+      GLOBAL_RATE_LIMIT_WINDOW_MS: 60000
+      REQUEST_TIMEOUT_MS: 5000
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure

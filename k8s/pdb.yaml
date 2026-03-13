@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ha-cloud-webapp
+  namespace: ha-webapp
+spec:
+  minAvailable: 3
+  selector:
+    matchLabels:
+      app: ha-cloud-webapp

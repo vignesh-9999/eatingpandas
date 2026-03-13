@@ -1,0 +1,42 @@
+{
+  "name": "ha-cloud-webapp",
+  "version": "1.0.0",
+  "description": "Fault-tolerant and highly available web app starter for heavy traffic cloud deployment.",
+  "type": "commonjs",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "load": "node scripts/load-test.js"
+  },
+  "keywords": [
+    "fastify",
+    "kubernetes",
+    "high-availability",
+    "fault-tolerant",
+    "cloud"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/sensible": "^6.0.3",
+    "fastify": "^5.1.0",
+    "opossum": "^8.3.0",
+    "pino": "^9.5.0",
+    "undici": "^6.21.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "autocannon": "^8.0.0",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webapp-config
+  namespace: ha-webapp
+data:
+  NODE_ENV: "production"
+  HOST: "0.0.0.0"
+  PORT: "8080"
+  LOG_LEVEL: "info"
+  GLOBAL_RATE_LIMIT_MAX: "4000"
+  GLOBAL_RATE_LIMIT_WINDOW_MS: "60000"
+  REQUEST_TIMEOUT_MS: "5000"
+  BREAKER_TIMEOUT_MS: "4000"
+  BREAKER_ERROR_THRESHOLD_PERCENTAGE: "50"
+  BREAKER_RESET_TIMEOUT_MS: "30000"
+  DOWNSTREAM_RETRIES: "2"
